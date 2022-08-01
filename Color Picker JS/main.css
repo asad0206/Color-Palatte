@@ -7,24 +7,15 @@
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 
+  box-sizing: border-box;
   font-family: "Fira Sans", sans-serif;
 }
 
-button,
-input {
-  appearance: none;
-  border: none;
-  outline: none;
-  background: none;
-  color: inherit;
-}
-
 body {
-  background: var(--light);
+  background-color: var(--light);
 }
 
 main {
@@ -36,7 +27,7 @@ main {
 h1 {
   color: var(--dark);
   font-size: 3rem;
-  font-family: 900;
+  font-weight: 900;
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
@@ -68,9 +59,8 @@ p {
 
 h4 {
   color: var(--grey);
-  text-transform: uppercase;
   font-size: 1.5rem;
-  font-weight: 700;
+  text-transform: uppercase;
   margin-bottom: 1rem;
 }
 
@@ -85,11 +75,42 @@ h4 {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
-  border-radius: 1rem;
-  color: #fff;
   background-color: var(--dark);
+  color: #fff;
+  border-radius: 1rem;
   transition: 0.4s ease-out;
   border: 2px solid transparent;
+}
+
+.colour.copied {
+  border: 2px solid red;
+}
+
+button,
+input {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+
+button {
+  user-select: none;
+  cursor: pointer;
+}
+
+.lock-toggle {
+  opacity: 0.5;
+  transition: 0.4s linear;
+}
+
+.lock-toggle.is-locked {
+  opacity: 1;
+}
+
+.color-input {
+  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -101,5 +122,17 @@ h4 {
 @media (min-width: 1024px) {
   .colors {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .color {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .color-input {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 }
