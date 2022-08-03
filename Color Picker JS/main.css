@@ -64,13 +64,13 @@ h4 {
   margin-bottom: 1rem;
 }
 
-.colors {
+.colours {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 1rem;
 }
 
-.color {
+.colour {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -109,29 +109,29 @@ button {
   opacity: 1;
 }
 
-.color-input {
+.colour-input {
   text-align: center;
 }
 
 @media (min-width: 768px) {
-  .colors {
+  .colours {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 1024px) {
-  .colors {
+  .colours {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .color {
+  .colour {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 1rem;
   }
 
-  .color-input {
+  .colour-input {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
